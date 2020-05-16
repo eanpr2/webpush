@@ -32,11 +32,11 @@
       "url": "css\/open-iconic\/font\/fonts\/open-iconic.svg"
     },
     {
-      "hash": "sha256-p+RP8CV3vRK1YbIkNzq3rPo1jyETPnR07ULb+HVYL8w=",
+     
       "url": "css\/open-iconic\/font\/fonts\/open-iconic.ttf"
     },
     {
-      "hash": "sha256-cZPqVlRJfSNW0KaQ4+UPOXZ\/v\/QzXlejRDwUNdZIofI=",
+   
       "url": "css\/open-iconic\/font\/fonts\/open-iconic.woff"
     },
     {
@@ -200,7 +200,7 @@
       "url": "_framework\/_bin\/System.Xml.Linq.dll"
     },
     {
-      "hash": "sha256-PTFwvagsDjObp8CGrQfJB\/yg6v+NlQ\/fiIlN3PGWTlc=",
+   
       "url": "_framework\/_bin\/WebAssembly.Bindings.dll"
     },
     {
