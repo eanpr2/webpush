@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>BlazorApp4</title>
+    <base href="/" />
+    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/app.css" rel="stylesheet" />
+    <link href="manifest.json" rel="manifest" />
+    <link rel="apple-touch-icon" sizes="512x512" href="icon-512.png" />
+</head>
+
+<body>
+    <app>Loading...</app>
+
+    <div id="blazor-error-ui">
+        An unhandled error has occurred.
+        <a href="" class="reload">Reload</a>
+        <a class="dismiss">🗙</a>
+    </div>
+    <script src="_framework/blazor.webassembly.js"></script>
+    <script>navigator.serviceWorker.register('service-worker.js');</script>
+    <script>
+        async function subscribeUser() {
+            registration = await navigator.serviceWorker.ready;
+            subscription = await registration.pushManager.subscribe({
+                userVisibleOnly: true,
+                applicationServerKey: "BJ5IxJBWdeqFDJTvrZ4wNRu7UY2XigDXjgiUBYEYVXDudxhEs0ReOJRBcBHsPYgZ5dyV8VjyqzbQKS8V7bUAglk"
+            });
+
+            console.log(JSON.stringify(subscription));
+            return subscription;
+        }
+
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                Notification.requestPermission(function (result) {
+
+                    if (result === 'granted') {
+                        navigator.serviceWorker.ready.then(function (registration) {
+                            registration.pushManager.getSubscription().then(function (sub) {
+                                if (sub === null) {
+                                    subscribeUser();
+                                }
+                                else {
+                                    console.log('Subscription object: ', sub);
+                                }
+                            })
+                                .catch(function (err) {
+                                    console.log('Service Worker registration failed: ', err);
+                                });
+                        });
+                    }
+                });
+            });
+        }
+    </script>
+</body>
+
+</html>
