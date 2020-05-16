@@ -8,15 +8,15 @@
       "url": "css\/bootstrap\/bootstrap.min.css"
     },
     {
-      "hash": "sha256-xMZ0SaSBYZSHVjFdZTAT\/IjRExRIxSriWcJLcA9nkj0=",
+   
       "url": "css\/bootstrap\/bootstrap.min.css.map"
     },
     {
-      "hash": "sha256-jA4J4h\/k76zVxbFKEaWwFKJccmO0voOQ1DbUW+5YNlI=",
+    
       "url": "css\/open-iconic\/FONT-LICENSE"
     },
     {
-      "hash": "sha256-BJ\/G+e+y7bQdrYkS2RBTyNfBHpA9IuGaPmf9htub5MQ=",
+   
       "url": "css\/open-iconic\/font\/css\/open-iconic-bootstrap.min.css"
     },
     {
@@ -48,15 +48,15 @@
       "url": "css\/open-iconic\/README.md"
     },
     {
-      "hash": "sha256-qU+KhVPK6oQw3UyjzAHU4xjRmCj3TLZUU\/+39dni9E0=",
+    
       "url": "favicon.ico"
     },
     {
-      "hash": "sha256-IpHFcQvs03lh6W54zoeJRG1jW+VnGmwymzxLoXtKX7Y=",
+    
       "url": "icon-512.png"
     },
     {
-      "hash": "sha256-MCLH6WiyqLitd6BrhwqRKMheWtNtSHu3fOsP+jzBAdo=",
+     
       "url": "index.html"
     },
     {
