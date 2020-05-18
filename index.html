@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>BlazorApp4</title>
-    <base href="/" />
+    <base href="/webpush/" />
     <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
     <link href="css/app.css" rel="stylesheet" />
     <link href="manifest.json" rel="manifest" />
@@ -13,7 +13,26 @@
 </head>
 
 <body>
-    <app>Loading...</app>
+    <app>Loading...</app> 
+    <script type="text/javascript"> 
+        (function(l) {
+            if (l.search) {
+                var q = {};
+                l.search.slice(1).split('&').forEach(function(v) {
+                    var a = v.split('=');
+                    q[a[0]] = a.slice(1).join('=').replace(/~and~/g, '&');
+                });
+                if (q.p !== undefined) {
+                    window.history.replaceState(null, null,
+                        l.pathname.slice(0, -1) + (q.p || '') +
+                        (q.q ? ('?' + q.q) : '') +
+                        l.hash
+                    );
+                }
+            }
+        }(window.location)) 
+    </script>
+    <!-- End Single Page Apps for GitHub Pages -->
 
     <div id="blazor-error-ui">
         An unhandled error has occurred.
@@ -57,6 +76,7 @@
             });
         }
     </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha384-xBuQ/xzmlsLoJpyjoggmTEz8OWUFM0/RC5BsqQBDX2v5cMvDHcMakNTNrHIW2I5f" crossorigin="anonymous"></script>
 </body>
 
 </html>
